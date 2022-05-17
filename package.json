@@ -12,6 +12,10 @@
     "@semantic-release/git": "^10.0.1",
     "semantic-release": "^18.0.1"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "release": {
     "branches": [
       "main"
