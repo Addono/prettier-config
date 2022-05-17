@@ -1,0 +1,38 @@
+{
+  "name": "@addono/prettier-config",
+  "description": "Shared configuration for Prettier",
+  "version": "1.0.0",
+  "private": false,
+  "main": "index.json",
+  "repository": "git@github.com:addono/prettier-config",
+  "author": "Adriaan Knapen <hi@aknapen.nl>",
+  "license": "MIT",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^18.0.1"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": true
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  }
+}
