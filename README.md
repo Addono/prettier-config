@@ -1,4 +1,4 @@
-# @addono/prettier-config
+# `@addono/prettier-config`
 
 Shared configuration for [Prettier](https:/prettier.io).
 
